@@ -16,7 +16,6 @@
   copy:
         src: /home/ec2-user/node_exporter-1.0.1.linux-amd64/node_exporter
         dest: /usr/local/bin/
-        remote_src: yes
 - name: Change file permission
   file:
         path: /usr/local/bin/node_exporter
@@ -35,7 +34,6 @@
   copy: 
         src: /home/ec2-user/Prometheus_Grafana_Install/roles/node_exporter/files/node_exporter.service
         dest: /etc/systemd/system/node_exporter.service
-        remote_src: yes
 - name: Start node_exporter
   systemd:
         state: started
@@ -46,7 +44,6 @@
   copy: 
         src: /home/ec2-user/Prometheus_Grafana_Install/roles/node_exporter/files/prometheus2.yml
         dest: /etc/prometheus/prometheus.yml
-        remote_src: yes
 - name: Restart Prometheus
   systemd:
         name: prometheus
