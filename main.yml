@@ -6,7 +6,7 @@
   roles:
     - prometheus
     - grafana
-    - node_exporter
+    #- node_exporter
 
 
     
