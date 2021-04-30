@@ -4,9 +4,9 @@
   become_user: root
   become_method: sudo
   roles:
-    - prometheus
-    - grafana
-    #- node_exporter
+#     - prometheus
+#     - grafana
+    - node_exporter
 
 
     
